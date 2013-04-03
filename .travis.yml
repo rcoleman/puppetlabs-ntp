@@ -12,7 +12,7 @@ jdk:
 language: ruby
 script: 
 - "rake spec"
-- "java --version"
+- "java -version"
 after_success:
 - git clone -q git://github.com/puppetlabs/ghpublisher.git .forge-releng
 - .forge-releng/publish
