@@ -10,11 +10,11 @@ branches:
   only:
     - master
 env:
-  global:
-    - PUBLISHER_LOGIN=rcoleman
-    - secure: "Wq02qFt3Mlhx4bgy+Vs+jlf27WIQM+Z8yLJMusqiJcwaqBMwrCh0nK8Lj9oQ\nc31e8MbIuIRa9LIg30IWWe6jTw0n18K6kfQ6zhon6iWa+6w8w19iLetGA/14\nQi9u7rn9yePrHXtbIW9W7YfAmVVJts+Q637xgHyFXtXpaNEzrvA="
-  matrix:
-    - PUPPET_VERSION=2.7.13
+ global:
+  - PUBLISHER_LOGIN=rcoleman
+  - secure: "XHHOkIpLKQe4Dz9pafncz1nlvok+B+iZs7H0nLvYKO5aJ3l7ZOvt8IjubMXV\nZZjDJAyBgDF2L/WWvWCIijjIvJJ5rmSbhEpgWm18w+nnlaRePyNOvIfq9iOA\nADbs2y4aqqtcdZ/LEkMV5R/HHL3BkbjTv9S7KewO6459DQTT+Pc="
+ matrix:
+  - PUPPET_VERSION=2.7.13
 notifications:
   email: false
 gemfile: .gemfile
