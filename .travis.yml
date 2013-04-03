@@ -1,20 +1,25 @@
-language: ruby
-rvm:
-  - 1.8.7
-  - jruby-18mode
-script:
-  - 'false'
-  - git clone -q git://github.com/puppetlabs/ghpublisher.git .forge-releng
-  - .forge-releng/publish
-branches:
-  only:
-    - master
-env:
- global:
-  - PUBLISHER_LOGIN=rcoleman
-  - secure: "XHHOkIpLKQe4Dz9pafncz1nlvok+B+iZs7H0nLvYKO5aJ3l7ZOvt8IjubMXV\nZZjDJAyBgDF2L/WWvWCIijjIvJJ5rmSbhEpgWm18w+nnlaRePyNOvIfq9iOA\nADbs2y4aqqtcdZ/LEkMV5R/HHL3BkbjTv9S7KewO6459DQTT+Pc="
- matrix:
-  - PUPPET_VERSION=2.7.13
-notifications:
-  email: false
+--- 
+branches: 
+  only: 
+  - master
 gemfile: .gemfile
+rvm: 
+- 1.8.7
+- jruby-18mode
+language: ruby
+script: 
+- "rake spec"
+after_success:
+- git clone -q git://github.com/puppetlabs/ghpublisher.git .forge-releng
+- .forge-releng/publish
+notifications: 
+  email: false
+env: 
+  global: 
+  - PUBLISHER_LOGIN=rcoleman
+  - secure: |-
+      FN48f+mE0+fSm7Mgo297QTBTbQPLh6/PcOLD71gFGr6m9diq65HwYkzo9Sax
+      zh+s1BzNXSbt2Is8fmiU8xY9dOguLOhuK7WVtNqfSSsrR2Io1SGr9u1jvsCD
+      DowqFhsZAKNrt8sSX53ggBcCD0ysnx+qklS86NA6y8w1HowS2ys=
+  matrix: 
+  - PUPPET_VERSION=2.7.13
