@@ -9,8 +9,8 @@ branches:
 env:
   matrix:
     - PUPPET_VERSION=2.7.13
-    - PUBLISHER_LOGIN=rcoleman
-    - secure: "XHHOkIpLKQe4Dz9pafncz1nlvok+B+iZs7H0nLvYKO5aJ3l7ZOvt8IjubMXV\nZZjDJAyBgDF2L/WWvWCIijjIvJJ5rmSbhEpgWm18w+nnlaRePyNOvIfq9iOA\nADbs2y4aqqtcdZ/LEkMV5R/HHL3BkbjTv9S7KewO6459DQTT+Pc="
+  global:
+    - PUBLISHER_LOGIN=rcoleman PUBLISHER_PASSWORD=secure: "XHHOkIpLKQe4Dz9pafncz1nlvok+B+iZs7H0nLvYKO5aJ3l7ZOvt8IjubMXV\nZZjDJAyBgDF2L/WWvWCIijjIvJJ5rmSbhEpgWm18w+nnlaRePyNOvIfq9iOA\nADbs2y4aqqtcdZ/LEkMV5R/HHL3BkbjTv9S7KewO6459DQTT+Pc="
 notifications:
   email: false
 gemfile: .gemfile
