@@ -1,4 +1,4 @@
-name    'puppetlabs-ntp'
+name    'rcoleman-ntp'
 version '0.0.4'
 source 'git://github.com/puppetlabs/puppetlabs-ntp'
 author 'Puppet Labs'
