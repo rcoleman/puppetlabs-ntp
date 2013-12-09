@@ -39,31 +39,6 @@ class ntp::params {
         '3.debian.pool.ntp.org iburst',
       ]
     }
-    'Debian': {
-      $config          = '/etc/ntp.conf'
-      $keys_file       = '/etc/ntp/keys'
-      $driftfile       = '/var/lib/ntp/drift'
-      $package_name    = [ 'ntp' ]
-      $service_name    = 'ntp'
-      $servers         = [
-        '0.debian.pool.ntp.org iburst',
-        '1.debian.pool.ntp.org iburst',
-        '2.debian.pool.ntp.org iburst',
-        '3.debian.pool.ntp.org iburst',
-      ]
-    }
-    'RedHat': {
-      $config          = '/etc/ntp.conf'
-      $driftfile       = '/var/lib/ntp/drift'
-      $keys_file       = '/etc/ntp/keys'
-      $package_name    = [ 'ntp' ]
-      $service_name    = 'ntpd'
-      $servers         = [
-        '0.centos.pool.ntp.org',
-        '1.centos.pool.ntp.org',
-        '2.centos.pool.ntp.org',
-      ]
-    }
     'SuSE': {
       $config          = '/etc/ntp.conf'
       $driftfile       = '/var/lib/ntp/drift/ntp.drift'
